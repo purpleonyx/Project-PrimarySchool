@@ -17,8 +17,8 @@ body {
 }
 
 #bg-elements {
-    width: 100%;
-    margin: 0px;
+    width: auto;
+    height: auto;
     position: fixed;
     top: 0;
     z-index: 1;
@@ -85,7 +85,7 @@ nav {
 }
 
 .nav-link:hover {
-    color: #FF9505;
+    color: #3D348B;
 }
 
 #data-link {
@@ -100,15 +100,18 @@ nav {
 }
 
 #data-link:hover {
-    color: #FF9505;
-    border: 3px solid #E2711D;
+    color: #3D348B;
+    border: 3px solid #2e2675;
 }
+
+/* HERO */
 
 #hero-section {
     display: flex;
     justify-content: space-between;
     align-items: end;
     margin: 140px 0px 0px 0px;
+    padding: 0px 15px 10px 10px;
 }
 
 #hero-sc-picture {
@@ -142,6 +145,7 @@ nav {
     justify-content: space-between;
     align-items: end;
     margin: 100px 0px 0px 0px;
+    padding: 0px 10px 10px 10px;
 }
 
 #about-hero-sc-picture {
