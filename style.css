@@ -133,3 +133,28 @@ nav {
     text-align: right;
     margin: 0px;
 }
+
+/* ABOUT */
+
+#about-hero-section {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: end;
+    margin: 100px 0px 0px 0px;
+}
+
+#about-hero-sc-picture {
+    width: 450px;
+    border-radius: 170px 60px 25px 60px;
+}
+
+#about-main-small-text {
+    font-family: fjella;
+    font-size: 15px;
+    color: white;
+    text-align: left;
+    margin: 0px;
+    font-weight: lighter;
+    width: 550px;
+}
