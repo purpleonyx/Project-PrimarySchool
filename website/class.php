@@ -165,7 +165,12 @@ $user_data = check_login($con);
                             $result = $conn-> query($sql);
                             if($result-> num_rows > 0) {
                                 while ($row = $result-> fetch_assoc()){
-                                    echo "<tr><td>". $row["class_ID"] ."</td><td>". $row["class_year"] ."</td><td>". $row["class_capacity"] ."</td><td>". $row["class_room"] ."</td><td>". $row["teacher_ID"] ."</td><td>". $row["subject_ID"] ."</td></tr>";
+                                    echo "<tr><td>".    $row["class_ID"] ."</td><td>". 
+                                                        $row["class_year"] ."</td><td>". 
+                                                        $row["class_capacity"] ."</td><td>". 
+                                                        $row["class_room"] ."</td><td>". 
+                                                        $row["teacher_ID"] ."</td><td>". 
+                                                        $row["subject_ID"] ."</td></tr>";
                                 }
                                 echo "</table>";
                             }

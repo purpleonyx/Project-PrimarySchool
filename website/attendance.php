@@ -13,6 +13,7 @@ $user_data = check_login($con);
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="stylem.css">
     </head>
 
     <style>
@@ -127,6 +128,14 @@ $user_data = check_login($con);
         font-weight: lighter;
         font-size: 18px;
     }
+
+    /* MODAL */
+    #modal-title-t {
+        font-family: fjella;
+        font-size: 20px;
+        color: #333333;
+        margin: 0px;
+    }
     </style>
 
     <body>
@@ -135,6 +144,7 @@ $user_data = check_login($con);
             <nav>
                 <div id="nav-logo-section">
                     <img src="logo.svg" alt="St. Alphonsus Primary School Main Logo" id="main_logo">
+                    <script src="jquery.min.js"></script>
                     <h2 id="logotext">St Alphonsus Primary School</h2>
                 </div>
                 
@@ -173,6 +183,60 @@ $user_data = check_login($con);
                     ?>
                 </table>
             </div>
+            <button id="mbtn" class="btn btn-primary turned-button">Add Data</button>
         </div>
+
+        <div id="modalDialog" class="modal">
+            <div class="modal-content animate-top">
+                <div class="modal-header">
+                    <h2 id="modal-title-t" class="modal-title">Add Data</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+
+                <form action="addatten.php" method="post">
+                            <label for="pupilsid" class="label-name">Pupil's ID:</label>
+                            <select name="pupilsid" class="selection" required>
+                                <?php   $conn = mysqli_connect("localhost", "root", "", "alphonsus_primary_school");
+                                        $sql = "SELECT * FROM pupils";
+                                        $result = $conn-> query($sql);
+                                if($result-> num_rows > 0) {
+                                while ($row = $result-> fetch_assoc()){
+                                    echo "<option>". $row["pupil_ID"] ."</option>";}
+                                    echo "</select>";
+                                }
+                                else {
+                                    echo "No Data was found";
+                                }
+                                $conn-> close(); ?>
+                            </select>
+                            <input type="date" name="date" class="date-selection">
+                            <label for="attendance" class="label-name">Attendance:</label> <select name="attendance" class="selection" required>
+                                <option>Present</option>
+                                <option>Late</option>
+                                <option>Absent</option>
+                            </select>
+                            <input type="submit" name="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+
+        <script>
+            var modal = $('#modalDialog');
+            var btn = $("#mbtn");
+            var span = $(".close");
+            $(document).ready(function(){
+                btn.on('click', function() {
+                    modal.show();
+                });
+                span.on('click', function() {
+                    modal.hide();
+                });
+            });
+            $('body').bind('click', function(e){
+                if($(e.target).hasClass("modal")){
+                    modal.hide();
+                }
+            });
+        </script>
     </body>
 </html>
