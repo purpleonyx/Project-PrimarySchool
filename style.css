@@ -17,8 +17,7 @@ body {
 }
 
 #bg-elements {
-    width: auto;
-    height: auto;
+    width: 100%;
     position: fixed;
     top: 0;
     z-index: 1;
@@ -26,7 +25,7 @@ body {
 
 #content {
     margin: 100px 150px;
-    padding: 25px;
+    padding: 40px;
     /* border-width: 3px;
     border-style: solid;
     border-image: linear-gradient(to right, white, #cccccc) 1; */
@@ -52,7 +51,7 @@ nav {
 
 #main_logo {
     width: 30px;
-    margin: 0px 0px 0px 10px;
+    /* margin: 0px 0px 0px 10px; */
 }
 
 #logo_text {
@@ -96,7 +95,7 @@ nav {
     border: 3px solid white;
     border-radius: 50px;
     padding: 5px 15px;
-    margin: 0px 15px;
+    margin: 0px 0px 0px 15px;
 }
 
 #data-link:hover {
@@ -111,12 +110,16 @@ nav {
     justify-content: space-between;
     align-items: end;
     margin: 140px 0px 0px 0px;
-    padding: 0px 15px 10px 10px;
+    /* padding: 0px 15px 10px 10px; */
 }
 
 #hero-sc-picture {
     width: 450px;
     border-radius: 60px 170px 60px 25px;
+}
+
+#hero-text-section {
+    margin: 0px 0px 0px 35px;
 }
 
 #main-small-text {
@@ -126,7 +129,6 @@ nav {
     text-align: right;
     margin: 0px;
     font-weight: lighter;
-    width: 550px;
 }
 
 #main-big-text {
@@ -145,12 +147,19 @@ nav {
     justify-content: space-between;
     align-items: end;
     margin: 100px 0px 0px 0px;
-    padding: 0px 10px 10px 10px;
 }
 
 #about-hero-sc-picture {
     width: 450px;
     border-radius: 170px 60px 25px 60px;
+}
+
+#hero-text-section {
+    margin: 0px 0px 0px 35px;
+}
+
+#ab-hero-text-section {
+    margin: 0px 35px 0px 0px;
 }
 
 #about-main-small-text {
@@ -160,5 +169,186 @@ nav {
     text-align: left;
     margin: 0px;
     font-weight: lighter;
-    width: 550px;
+}
+
+@media screen and (max-width: 1165px) {
+    #bg-elements {
+        width: 120%;
+        position: fixed;
+        left: -70px;
+    }
+
+    #content {
+        margin: 100px 100px;
+    }
+}
+
+@media screen and (max-width: 1060px) {
+    #bg-elements {
+        width: 140%;
+        position: fixed;
+        left: auto;
+        right: 0px;
+    }
+
+    #main_logo {
+        width: 25px;
+    }
+    
+    #logo_text {
+        font-size: 25px;
+    }
+
+    #data-link, .nav-link, .nav-link-disabled {
+        font-size: 25px;
+    }
+
+    #hero-sc-picture {
+        width: 400px;
+        border-radius: 60px 170px 60px 25px;
+    }
+
+    #about-hero-section {
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: start;
+        margin: 100px 0px 0px 0px;
+    }
+
+    #ab-hero-text-section {
+        margin: 0px;
+    }
+
+    #about-hero-sc-picture {
+        margin-top: 20px;
+        width: 100%;
+        border-radius: 40px;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    #main-big-text {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    #hero-section {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+    }
+
+    #hero-sc-picture {
+        width: 100%;
+        border-radius: 40px 150px 40px 40px;
+        margin-bottom: 20px;
+    }
+
+    #main-small-text, #main-big-text {
+        text-align: left;
+    }
+
+    #hero-text-section {
+        margin: 0px;
+    }
+}
+
+@media screen and (max-width: 897px) {
+    #bg-elements {
+        width: 220%;
+    }
+
+    #content {
+        margin: 75px;
+    }
+}
+
+@media screen and (max-width: 847px) {
+    nav {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #nav-logo-section {
+        margin-bottom: 20px;
+    }
+
+    #main_logo {
+        width: 20px;
+    }
+    
+    #logo_text {
+        font-size: 17px;
+        margin: -5px 0px 0px 10px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #bg-elements {
+        width: 270%;
+    }
+
+    #hero-section {
+        margin: 100px 0px 0px 0px;
+    }
+
+    #hero-sc-picture {
+        border-radius: 20px 100px 20px 20px;
+    }
+
+    #about-hero-sc-picture {
+        border-radius: 20px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    #bg-elements {
+        width: 320%;
+        position: fixed;
+        left: -30px;
+        right: auto;
+    }
+
+    #hero-sc-picture {
+        border-radius: 10px 50px 10px 10px;
+    }
+
+    #about-hero-sc-picture {
+        border-radius: 10px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #content {
+        margin: 50px;
+        padding: 30px;
+    }
+
+    #data-link, .nav-link, .nav-link-disabled {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    #content {
+        margin: 30px;
+    }
+
+    #data-link, .nav-link, .nav-link-disabled {
+        font-size: 15px;
+    }
+
+    #main_logo {
+        width: 17px;
+    }
+
+    #logo_text {
+        font-size: 15px;
+    }
+
+    #main-big-text {
+        font-size: 20px;
+    }
 }
