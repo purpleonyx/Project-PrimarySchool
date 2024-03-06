@@ -32,6 +32,7 @@ body {
     border: 3px solid rgba(235, 235, 235, 0.2);
     background: linear-gradient(305deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.2) 100%);
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-radius: 35px;
     position: relative;
     z-index: 2;
